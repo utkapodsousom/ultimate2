@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This is the title</title>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="mk-wrapper">
+      <header class="header">
+        <div class="header__timer timer" id="clockdiv">
+          <p class="timer__remain">до конца акции осталось:</p>
+          <div class="timer__inner">
+            <div class="timer__part">
+              <div class="timer__nums">
+                <span class="hours">00</span>
+              </div>
+              <span class="timer__text">часов</span>
+            </div>
+            <!-- /.timer__part -->
+            <div class="timer__part">
+              <div class="timer__nums">
+                <span class="minutes">00</span>
+              </div>
+              <span class="timer__text">минут</span>
+            </div>
+            <!-- /.timer__part -->
+            <div class="timer__part">
+              <div class="timer__nums">
+                <span class="seconds">00</span>
+              </div>
+              <span class="timer__text">секунд</span>
+            </div>
+            <!-- /.timer__part -->
+          </div>
+          <!-- /.timer__inner -->
+        </div>
+        <!-- /.header__timer -->
+      </header>
+      <!-- /.header -->
+      <div class="form__wrap" id="order-form">
+        <form action="" class="form" method="POST">
+          <label for="">Например, Елена</label>
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <label for="">Например, +79563441513</label>
+          <input type="tel" name="phone" placeholder="Ваш телефон" required>
+          <button type="submit" class="mk-button form__button">Заказать со скидкой</button>
+        </form>
+      </div>
+      <!-- /.form__wrap -->
+      <footer class="footer">
+        <p class="footer__text">Юр. лицо<br><a href="policy.html" target="_blank">Политика конфиденциальности</a></p>
+      </footer>
+      <!-- /.footer -->
+    </div>
+    <!-- build:js scripts/vendor.js -->
+    <script src="scripts/timer.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

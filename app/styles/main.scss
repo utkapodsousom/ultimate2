@@ -1,0 +1,269 @@
+%posabs {
+  content: "";
+  position: absolute;
+}
+
+@mixin iconbg($name, $width: 0.5, $height: 0.5) {
+  background: url("../images/#{$name}.svg") 50% 50% / contain no-repeat;
+  width: #{$width}rem;
+  height: #{$height}rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+$font-main: "Arial";
+$font-secondary: "Times";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 625%;
+}
+
+body {
+  font-family: $font-main, sans-serif;
+  font-size: 0.18rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+picture {
+  display: block;
+
+  img {
+    display: block;
+  }
+}
+
+.mk-wrapper {
+  overflow: hidden;
+}
+
+.icon {
+  display: inline;
+  display: inline-block;
+}
+
+.mk-button {
+  appearance: none;
+  border: none;
+  outline: none !important;
+  background: crimson;
+  display: block;
+  width: 100%;
+  max-width: 4.2rem;
+  text-align: center;
+  padding: 0.28rem;
+  color: #fff;
+  font-size: 0.24rem;
+  font-weight: 700;
+  line-height: 1.17;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.timer {
+  padding: 0 0.3rem;
+  margin-bottom: 0.48rem;
+
+  &__remain {
+    text-align: center;
+    margin-bottom: 0.15rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  &__part {
+    width: 1.1rem;
+    text-align: center;
+    position: relative;
+
+    &:not(:last-child):before {
+      content: ":";
+      position: absolute;
+      right: -0.32rem;
+      top: 0;
+      font-size: 0.7rem;
+      font-weight: 400;
+      line-height: 1;
+      color: #101010;
+    }
+  }
+
+  &__nums {
+    border-radius: 0.1rem;
+    background-color: #ffa96b;
+    text-align: center;
+
+    span {
+      font-size: 0.7rem;
+      font-weight: 400;
+
+      color: #101010;
+    }
+  }
+
+  &__text {
+    font-size: 0.19rem;
+    font-weight: 400;
+  }
+}
+
+.section {
+  padding-top: 0.64rem;
+
+  &__title {
+    font-size: 0.35rem;
+    font-weight: 900;
+
+    padding: 0 0.3rem;
+    text-align: center;
+    color: #101010;
+    margin-bottom: 0.32rem;
+  }
+
+  &__text {
+    padding: 0 0.3rem;
+  }
+}
+
+.reviews {
+  padding-bottom: 0.64rem;
+  background-color: #fff;
+
+  &__slider {
+    padding: 0.16rem .4rem;
+    padding-bottom: 0.56rem;
+
+    .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+      z-index: 1;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      width: 0.39rem;
+      height: 0.39rem;
+      top: unset;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    .swiper-button-prev {
+      left: 1.6rem;
+    }
+
+    .swiper-button-next {
+      right: 1.6rem;
+    }
+  }
+}
+
+.form {
+  label,
+  input {
+    display: block;
+    width: 100%;
+  }
+
+  label {
+    color: #232323;
+    margin-bottom: 0.07rem;
+  }
+
+  input {
+    font-size: 0.18rem;
+    color: #000;
+    padding: 0.2rem 0.1rem;
+    border: 1px solid #c5c5c5;
+    border-radius: .1rem;
+    margin-bottom: 0.24rem;
+  }
+
+  &__wrap {
+    padding: 0 .3rem;
+  }
+
+  &__button {
+    margin-top: 0.48rem;
+  }
+
+  ::placeholder {
+    font-size: 0.18rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #404040;
+  }
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  font-size: 0.27rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.footer {
+  padding: 0.2rem 0.3rem;
+
+  &__text {
+    font-size: 0.14rem;
+    text-align: center;
+    color: #000;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media all and (max-width: 479px) {
+  html {
+    font-size: 21vw;
+  }
+}
